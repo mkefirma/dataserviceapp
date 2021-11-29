@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/bootstrap";
+@import 'Variable';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $light;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: $dark;
+}
