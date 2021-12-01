@@ -1,1 +1,38 @@
 $white: #fff;
+$fregular: 'Netflix Sans Regular';
+$fthin: 'Netflix Sans Thin';
+$fmedium: 'Netflix Sans Medium';
+$flight: 'Netflix Sans Light';
+$ficon: 'Netflix Sans Icon';
+$fbold: 'Netflix Sans Bold';
+$fblack: 'Netflix Sans Black';
+
+// Font
+@font-face {
+    font-family: 'Netflix Sans Regular';
+    src: url(font/NetflixSansRegular.ttf);
+}
+@font-face {
+    font-family: 'Netflix Sans Thin';
+    src: url(font/NetflixSansThin.ttf);
+}
+@font-face {
+    font-family: 'Netflix Sans Medium';
+    src: url(font/NetflixSansMedium.ttf);
+}
+@font-face {
+    font-family: 'Netflix Sans Light';
+    src: url(font/NetflixSansLight.ttf);
+}
+@font-face {
+    font-family: 'Netflix Sans Icon';
+    src: url(font/NetflixSansIcon.ttf);
+}
+@font-face {
+    font-family: 'Netflix Sans Bold';
+    src: url(font/NetflixSansBold.ttf);
+}
+@font-face {
+    font-family: 'Netflix Sans Black';
+    src: url(font/NetflixSansBlack.ttf);
+}

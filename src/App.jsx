@@ -4,19 +4,23 @@ import './scss/Style.scss';
 import Header from './components/layout/Header';
 import Home from './pages/Home';
 import Starwars from './pages/Starwars1';
+import News from './pages/News';
+import Films from './pages/Films';
 
 const App = () => {
   return (
-    <React.StrictMode>
+    <>
       <Header />
 
       <Routes>
 
         <Route path="/" element={ <Home /> } />
         <Route path="/starwars" element={ <Starwars /> } />
+        <Route path="/news" element={ <News /> } />
+        <Route path="/films" element={ <Films /> } />
 
       </Routes>
-    </React.StrictMode>
+    </>
   );
 }
 

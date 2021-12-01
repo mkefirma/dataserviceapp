@@ -5,10 +5,116 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: $light;
-    font-family: sans-serif;
+    // color: $light;
+    font-family: $fregular !important;
 }
 
 body {
     background-color: $dark;
+}
+
+#list-dropdown {
+    padding: 1rem 1rem 1rem 2rem;
+    margin: 0;
+}
+
+#list-dropdown:not(.active) {
+    display: none;
+}
+
+.float-right {
+    float: right;
+}
+
+.film-img {
+    width: 100%;
+    cursor: pointer;
+    img {
+        z-index: 0;
+        object-fit: cover;
+    }
+    .logo-title {
+        position: absolute;
+        // top: 0;
+    }
+}
+
+.film-item {
+    transition: all .3s;
+    .film-box {
+        background: rgb(22, 22, 22);
+        border-radius: 0.15rem;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.616);
+        .film-content {
+            position: relative;
+        }
+    }
+}
+
+.film-item.active {
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+    transition: all .3s;
+    z-index: 555;
+    background-color: transparent;
+    .film-box {
+        img {
+            z-index: 1;
+        }
+    }
+}
+
+.custom-box {
+    padding: .1rem .5rem;
+}
+
+.custom-fsize1 {
+    font-size: .8rem;
+    font-weight: 700;
+    margin: .5rem 0;
+    span {
+        cursor: pointer;
+        margin-right: .75rem;
+        display: inline-block;
+        border-radius: 60px;
+        // box-shadow: 0px 0px 2px #888;
+        border: 1px solid rgb(104, 104, 104);
+        background-color: rgb(32, 32, 32);
+        padding: .4em .7em;
+        transition: all .3s;
+    }
+    span:hover {
+        // box-shadow: 0px 0px 2px #fff;
+        border-color: #fff;
+    }
+    span.active {
+        background-color: #fff;
+        border-color: #fff;
+        color: rgb(22, 22, 22);
+    }
+}
+
+.custom-fsize2 {
+    font-size: .7rem;
+    margin: .5rem 0;
+}
+
+.custom-fsize3 {
+    font-size: .7rem;
+    margin: .5rem 0;
+    display: flex;
+    li {
+        margin-left: 10px;
+    }
+    li::marker {
+        color: #888;
+    }
+}
+
+.custom-modal {
+    .bg-dark {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.616) !important;
+        background: rgb(22, 22, 22) !important;
+    }
 }
