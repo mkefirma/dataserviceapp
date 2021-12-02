@@ -33,9 +33,9 @@ const Starwars1 = () => {
         <>
             <section className="py-5">
                 <Container>
-                    { people && <Alert variant="success"><p className="mb-0">Her er data</p></Alert> }
-                    { loading && <Alert variant="warning"><p className="mb-0">Der loades data fra api... vent venligst!<Spinner animation="border" role="status" className="float-right"><span className="visually-hidden">Loading...</span></Spinner></p></Alert> }
-                    { fejl && <Alert variant="danger"><p className="mb-0">Der opstod en fejl!</p></Alert> }
+                    { people && <Alert variant="success"><div className="mb-0">Her er data</div></Alert> }
+                    { loading && <Alert variant="warning"><div className="mb-0">Der loades data fra api... vent venligst!<Spinner animation="border" role="status" className="float-right"><span className="visually-hidden">Loading...</span></Spinner></div></Alert> }
+                    { fejl && <Alert variant="danger"><div className="mb-0">Der opstod en fejl!</div></Alert> }
                     { people && 
                     <Card>
                         <Card.Body>

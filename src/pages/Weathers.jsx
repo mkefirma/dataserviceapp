@@ -70,7 +70,7 @@ const Weathers = () => {
                             </datalist>
                             <InputGroup className="mb-2">
                                 <FormControl type="text" list="zipCodeList" autoComplete="off" placeholder="Indstast postnummer..." className="form-control" defaultValue={ zipCode } onChange={ ( e ) => setZipCode( e.target.value ) } />
-                                <InputGroup.Text className="btn btn-success"><FontAwesomeIcon icon={faSearch} onClick={ submit } /></InputGroup.Text>
+                                <InputGroup.Text className="btn btn-success" onClick={ submit } ><FontAwesomeIcon icon={faSearch} /></InputGroup.Text>
                             </InputGroup>
                         </Card.Body>
                     </Card>
