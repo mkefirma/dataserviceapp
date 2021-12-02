@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
-import { Col, Modal, Button, Footer, Image } from 'react-bootstrap'
-import ReactDOM from 'react-dom'
+import { Col, Modal, Button, Image } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faPlay, faPlus, faThumbsUp, faThumbsDown, faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faPlus, faThumbsUp, faThumbsDown, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import Logo from './cover.jpg';
 
 const Movies = ( props ) => {
 
-    const m = props.person;
+    const m = props.data;
 
     const [ active, setActive ] = useState( false );
     const [ show, setShow ] = useState( false );
@@ -26,11 +25,13 @@ const Movies = ( props ) => {
                                 <span className="logo-title">{ m.title }</span>
                             </div>
                         </div>
+                        { active && (
                             <div className="text-white p-3">
                                 <div className="custom-fsize1"><span className="active"><FontAwesomeIcon icon={faPlay} /></span><span><FontAwesomeIcon icon={faPlus} /></span><span><FontAwesomeIcon icon={faThumbsUp} /></span><span><FontAwesomeIcon icon={faThumbsDown} /></span><span className="float-right circle" onClick={handleShow}><FontAwesomeIcon icon={faAngleDown} /></span></div>
                                 <div className="custom-fsize2"><span className="text-success fw-bold me-1">Ny</span>&nbsp;<span className="bg-dark border border-light text-white custom-box me-1">18+</span>&nbsp;<span className="me-1">{ m.episode_id + " Episoder"}</span>&nbsp;<span className="bg-dark border border-light text-white custom-box">HD</span></div>
                                 <div className="custom-fsize3"><span>Uhygglig</span><li>Ildevarslende</li><li>Medvirkende</li></div>
                             </div>
+                        ) }
                     </div>
                 </div>
                 <Modal show={show} onHide={handleClose} centered size="lg" className="custom-modal" dialogClassName="p-4" contentClassName="bg-dark text-white">

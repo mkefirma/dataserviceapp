@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Card, ListGroup, Alert, Spinner } from 'react-bootstrap'
 import Peoples from '../components/Peoples'
-import { getPoeple } from '../helpers/CallSwapi' 
+import { getPoeple } from '../helpers/Request' 
 
 const Starwars1 = () => {
 
@@ -16,7 +16,7 @@ const Starwars1 = () => {
         setTimeout(() => {
             getPoeple().then( data => {
                 if ( data ) {
-                    console.log(data);
+                    // console.log(data);
                     setPeople(data);
                     setFejl(false);
                 } else {
@@ -24,7 +24,6 @@ const Starwars1 = () => {
                     setFejl(true);
                 }
             } ).finally(
-
                 setLoading(false)
             )
         }, 3000);
@@ -34,22 +33,22 @@ const Starwars1 = () => {
         <>
             <section className="py-5">
                 <Container>
+                    { people && <Alert variant="success"><p className="mb-0">Her er data</p></Alert> }
+                    { loading && <Alert variant="warning"><p className="mb-0">Der loades data fra api... vent venligst!<Spinner animation="border" role="status" className="float-right"><span className="visually-hidden">Loading...</span></Spinner></p></Alert> }
+                    { fejl && <Alert variant="danger"><p className="mb-0">Der opstod en fejl!</p></Alert> }
+                    { people && 
                     <Card>
                         <Card.Body>
                             <Card.Title className="text-dark">Starwars</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Starwars loop</Card.Subtitle>
-                            { people && <Alert variant="success"><p className="mb-0">Her er data</p></Alert> }
-                            { loading && <Alert variant="warning"><p className="mb-0">Der loades data fra api... vent venligst!<Spinner animation="border" role="status" className="float-right"><span className="visually-hidden">Loading...</span></Spinner></p></Alert> }
-                            { fejl && <Alert variant="danger"><p className="mb-0">Der opstod en fejl!</p></Alert> }
-                            { people && 
                                 <ListGroup variant="flush">
                                     { people.results.map( p => (
-                                        <Peoples person={p} key={ p.name } />
+                                        <Peoples data={p} key={ p.name } />
                                     ) ) }
                                 </ListGroup>
-                            }
                         </Card.Body>
                     </Card>
+                    }
                 </Container>
             </section>
         </>

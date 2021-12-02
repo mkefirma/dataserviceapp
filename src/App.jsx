@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Starwars from './pages/Starwars1';
 import News from './pages/News';
 import Films from './pages/Films';
+import Weathers from './pages/Weathers';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/starwars" element={ <Starwars /> } />
         <Route path="/news" element={ <News /> } />
         <Route path="/films" element={ <Films /> } />
+        <Route path="/weathers" element={ <Weathers /> } />
 
       </Routes>
     </>

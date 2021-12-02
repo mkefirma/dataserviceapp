@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Col, Row, Alert, Spinner } from 'react-bootstrap'
 import Movies from '../components/Movies'
-import { getFilms } from '../helpers/CallSwapi' 
+import { getFilms } from '../helpers/Request' 
 
 const Films = () => {
 
@@ -16,7 +16,7 @@ const Films = () => {
         setTimeout(() => {
             getFilms().then( data => {
                 if ( data ) {
-                    console.log(data);
+                    // console.log(data);
                     setFilms(data);
                     setFejl(false);
                 } else {
@@ -42,7 +42,7 @@ const Films = () => {
                         { films && 
                             <>
                                 { films.results.map( n => (
-                                    <Movies person={n} key={ n.name } />
+                                    <Movies data={n} key={ n.name } />
                                 ) ) }
                             </>
                         }

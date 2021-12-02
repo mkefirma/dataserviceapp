@@ -3,7 +3,7 @@ import { ListGroup } from 'react-bootstrap'
 
 const Planets = ( props ) => {
 
-    const n = props.person;
+    const n = props.data;
 
     const [ show, setShow ] = useState( false );
 

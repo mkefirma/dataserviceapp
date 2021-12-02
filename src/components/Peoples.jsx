@@ -3,7 +3,7 @@ import { ListGroup } from 'react-bootstrap'
 
 const Peoples = ( props ) => {
 
-    const p = props.person;
+    const p = props.data;
 
     const [ show, setShow ] = useState( false );
 

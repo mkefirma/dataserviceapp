@@ -14,6 +14,7 @@ const Header = () => {
                         <Nav.Link href="/starwars">Starwars</Nav.Link>
                         <Nav.Link href="/news">Nyheder</Nav.Link>
                         <Nav.Link href="/films">Films</Nav.Link>
+                        <Nav.Link href="/weathers">Vejr</Nav.Link>
                         {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
